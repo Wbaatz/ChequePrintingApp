@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="447.0" prefWidth="644.0" style="-fx-background-color: linear-gradient(from 44.4444% 41.3712% to 100.0% 90.5437%, #ffffff 0.0%, #cecece 100.0%);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller_cheque">
+   <children>
+      <AnchorPane fx:id="ChequeReady" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="707.0" style="-fx-background-color: linear-gradient(from 44.4444% 41.3712% to 100.0% 90.5437%, #ffffff 0.0%, #cecece 100.0%);" visible="false">
+         <children>
+            <ChoiceBox fx:id="bankName" layoutX="54.0" layoutY="76.0" prefHeight="26.0" prefWidth="327.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ChoiceBox>
+            <DatePicker fx:id="datePicker" layoutX="469.0" layoutY="77.0" opacity="0.77" style="-fx-background-color: #cdcbcb;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <Blend opacity="0.0" />
+               </effect>
+            </DatePicker>
+            <TextField fx:id="payee_textfield" layoutX="114.0" layoutY="126.0" prefHeight="26.0" prefWidth="499.0" style="-fx-background-color: #cccccc51;">
+               <font>
+                  <Font name="Franklin Gothic Medium Italic" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="Amount_textfield" layoutX="120.0" layoutY="171.0" prefHeight="26.0" prefWidth="291.0" style="-fx-background-color: #cccccc51;">
+             <font>
+                  <Font name="Franklin Gothic Medium Italic" size="12.0" />
+               </font></TextField>
+            <Button fx:id="AddPayee" layoutX="613.0" layoutY="126.0" mnemonicParsing="false" onAction="#GoFunctions" prefHeight="26.0" prefWidth="34.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="..." textFill="WHITE">
+             <font>
+               <Font name="Ebrima Bold" size="12.0" />
+               </font>
+               </Button>
+            <Label layoutX="54.0" layoutY="126.0" prefHeight="18.0" prefWidth="61.0" text="Payee:">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="WordingTextField" layoutX="131.0" layoutY="211.0" prefHeight="25.0" prefWidth="512.0" style="-fx-background-color: #cccccc51;">
+             <font>
+                  <Font name="Franklin Gothic Medium Italic" size="12.0" />
+               </font></TextField>
+            <Pane layoutX="57.0" layoutY="255.0" prefHeight="159.0" prefWidth="614.0" style="-fx-background-color: transparent;">
+               <children>
+                  <Button fx:id="PrintChequebtn" layoutX="233.0" layoutY="16.0" mnemonicParsing="false" onAction="#GoPrinting" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Print Cheque" textFill="WHITE">
+                    <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="CheckHistoryBtn" layoutX="55.0" layoutY="16.0" mnemonicParsing="false" onAction="#CheckHistory" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="ChequeHistory" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="Go_Feedback_btn" layoutX="234.0" layoutY="69.0" mnemonicParsing="false" onAction="#FeedbackMethod" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="FeedbackBtn" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="PrintEnvelopebtn" layoutX="414.0" layoutY="15.0" mnemonicParsing="false" onAction="#GoPrinting" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Print Envelope" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <ChoiceBox fx:id="types" layoutX="435.0" layoutY="171.0" prefHeight="26.0" prefWidth="210.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ChoiceBox>
+            <Label layoutX="54.0" layoutY="215.0" prefHeight="18.0" prefWidth="79.0" text="Wording:">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="175.0" prefHeight="18.0" prefWidth="79.0" text="Amount:">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Payee_page" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="707.0" style="-fx-background-color: linear-gradient(from 44.4444% 41.3712% to 100.0% 90.5437%, #ffffff 0.0%, #cecece 100.0%);" visible="false">
+         <children>
+            <TextField fx:id="payee_tf_name" layoutX="71.0" layoutY="25.0" prefHeight="34.0" prefWidth="512.0" style="-fx-background-color: #cccccc51;">
+             <font>
+                  <Font name="Franklin Gothic Medium Italic" size="12.0" />
+               </font></TextField>
+            <Button fx:id="Select_name" layoutX="602.0" layoutY="25.0" mnemonicParsing="false" onAction="#AddToTable" prefHeight="34.0" prefWidth="91.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Select" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+            <TableView fx:id="payee_table" layoutX="70.0" layoutY="73.0" prefHeight="287.0" prefWidth="512.0">
+              <columns>
+                <TableColumn fx:id="payee_column" prefWidth="542.0" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </TableView>
+            <Button fx:id="Add_payee_btn" layoutX="309.0" layoutY="384.0" mnemonicParsing="false" onAction="#AddToTable" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="New" textFill="WHITE">
+             <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+            <Button fx:id="closepayeform" layoutX="452.0" layoutY="384.0" mnemonicParsing="false" onAction="#AddToTable" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Close" textFill="WHITE">
+             <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PrintEnvelope" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="707.0" style="-fx-background-color: linear-gradient(from 44.4444% 41.3712% to 100.0% 90.5437%, #ffffff 0.0%, #cecece 100.0%);" visible="false">
+         <children>
+            <Label layoutX="55.0" layoutY="113.0" text="Envelope:">
+             <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="SelectAddressBtn" layoutX="559.0" layoutY="189.0" mnemonicParsing="false" onAction="#GoPrinting" prefHeight="34.0" prefWidth="51.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="..." textFill="WHITE">
+             <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+            <Label layoutX="58.0" layoutY="198.0" text="Address:">
+             <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="SelectEnvelopeBtn" layoutX="559.0" layoutY="104.0" mnemonicParsing="false" onAction="#GoPrinting" prefHeight="34.0" prefWidth="51.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="..." textFill="WHITE">
+             <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+            <TextField fx:id="txtAddress" layoutX="156.0" layoutY="189.0" prefHeight="34.0" prefWidth="357.0" style="-fx-background-color: #cccccc51;">
+             <font>
+                  <Font name="Franklin Gothic Medium Italic" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="txtEnvelope" layoutX="156.0" layoutY="104.0" prefHeight="34.0" prefWidth="357.0" style="-fx-background-color: #cccccc51;">
+             <font>
+                  <Font name="Franklin Gothic Medium Italic" size="12.0" />
+               </font></TextField>
+            <Button fx:id="BackToCheque" layoutX="203.0" layoutY="285.0" mnemonicParsing="false" onAction="#GoPrinting" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Back" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+            <Button fx:id="printOutEnvelopebtn" layoutX="382.0" layoutY="285.0" mnemonicParsing="false" onAction="#GoPrinting" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Print" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="ChequeHistory" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="707.0" style="-fx-background-color: linear-gradient(from 44.4444% 41.3712% to 100.0% 90.5437%, #ffffff 0.0%, #cecece 100.0%);" visible="false">
+         <children>
+            <Button fx:id="back_to_Cheque" layoutX="545.0" layoutY="41.0" mnemonicParsing="false" onAction="#CheckHistory" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Back" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+            <TableView fx:id="check_history_table" layoutX="1.0" layoutY="94.0" prefHeight="382.0" prefWidth="707.0">
+              <columns>
+                  <TableColumn fx:id="check_history_dateCol" prefWidth="66.0" text="Date" />
+                <TableColumn fx:id="check_history_bankCol" prefWidth="127.0" text="Bank" />
+                  <TableColumn fx:id="check_history_payeeCol" minWidth="0.0" prefWidth="72.0" text="Payee" />
+                  <TableColumn fx:id="check_history_amountCol" prefWidth="103.0" text="Amount" />
+                  <TableColumn fx:id="check_history_wordingsCol" prefWidth="110.0" text="Wordings" />
+                  <TableColumn fx:id="check_history_typesCol" prefWidth="103.0" text="Types" />
+              </columns>
+            </TableView>
+            <Button fx:id="Print_to_Excelbtn" layoutX="376.0" layoutY="41.0" mnemonicParsing="false" onAction="#CheckHistory" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Print TO Excel" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="SelectAddress" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="707.0" style="-fx-background-color: linear-gradient(from 44.4444% 41.3712% to 100.0% 90.5437%, #ffffff 0.0%, #cecece 100.0%);" visible="false">
+         <children>
+            <Button fx:id="AddressSelectedBtn" layoutX="548.0" layoutY="26.0" mnemonicParsing="false" onAction="#AddToTable" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Select" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+            <TableView fx:id="AddressTable" layoutX="39.0" layoutY="89.0" prefHeight="300.0" prefWidth="567.0">
+              <columns>
+                <TableColumn fx:id="Address_Col_Address" prefWidth="520.0" text="Address" />
+              </columns>
+            </TableView>
+            <TextField fx:id="AddresstextSelect" layoutX="39.0" layoutY="26.0" prefHeight="34.0" prefWidth="499.0" style="-fx-background-color: #cccccc51;">
+             <font>
+                  <Font name="Franklin Gothic Medium Italic" size="12.0" />
+               </font></TextField>
+            <Button fx:id="AddressAddBtn" layoutX="475.0" layoutY="406.0" mnemonicParsing="false" onAction="#AddToTable" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Add" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="EnvelopeName" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="707.0" style="-fx-background-color: linear-gradient(from 44.4444% 41.3712% to 100.0% 90.5437%, #ffffff 0.0%, #cecece 100.0%);" visible="false">
+         <children>
+            <TextField fx:id="envelopetextSelect" layoutX="31.0" layoutY="23.0" prefHeight="34.0" prefWidth="512.0" style="-fx-background-color: #cccccc51;">
+             <font>
+                  <Font name="Franklin Gothic Medium Italic" size="12.0" />
+               </font></TextField>
+            <Button fx:id="EnvelopeSelectedBtn" layoutX="556.0" layoutY="23.0" mnemonicParsing="false" onAction="#AddToTable" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Select" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+            <TableView fx:id="EnvelopeTable" layoutX="28.0" layoutY="75.0" prefHeight="287.0" prefWidth="606.0">
+              <columns>
+                <TableColumn fx:id="Envelope_Col_Name" prefWidth="358.0" text="Envelope Name" />
+              </columns>
+            </TableView>
+            <Button fx:id="EnvelopeAddedBtn" layoutX="503.0" layoutY="399.0" mnemonicParsing="false" onAction="#AddToTable" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Add" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Feedback_Form" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="707.0" style="-fx-background-color: linear-gradient(from 44.4444% 41.3712% to 100.0% 90.5437%, #ffffff 0.0%, #cecece 100.0%);">
+         <children>
+            <Button fx:id="Submit_feedback_btn" layoutX="273.0" layoutY="410.0" mnemonicParsing="false" onAction="#FeedbackMethod" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Submit" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+            <Label layoutX="266.0" layoutY="18.0" prefHeight="34.0" prefWidth="145.0" text="State Your Name">
+                <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="State_name" layoutX="216.0" layoutY="63.0" prefHeight="34.0" prefWidth="245.0" promptText="Enter your name" style="-fx-background-color: #cccccc51;">
+             <font>
+                  <Font name="Franklin Gothic Medium Italic" size="12.0" />
+               </font></TextField>
+            <TextArea fx:id="GiveComment_field" layoutX="35.0" layoutY="145.0" prefHeight="250.0" prefWidth="606.0" promptText="Enter your Comments" style="-fx-background-color: #cccccc51;">
+             <font>
+                  <Font name="Franklin Gothic Medium Italic" size="12.0" />
+               </font></TextArea>
+            <Label layoutX="160.0" layoutY="104.0" prefHeight="34.0" prefWidth="389.0" text="Is there any thing you would like to share?">
+               <font>
+                  <Font name="Consolas Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="BackFromFeed" layoutX="549.0" layoutY="18.0" mnemonicParsing="false" onAction="#FeedbackMethod" prefHeight="34.0" prefWidth="131.0" style="-fx-background-color: linear-gradient(from 0.0% 0.0% to 100.0% 100.0%, #0471ab 0.0%, #2a93b0 100.0%);" text="Back" textFill="WHITE">
+              <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font></Button>
+            <Label layoutX="41.0" layoutY="402.0" text="Character Length:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="change_word_length" layoutX="147.0" layoutY="402.0" text="0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
